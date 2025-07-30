@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe "/" do
   it "lists the link URL and link description of each Item record in the database", points: 5 do
-    
+
     item_1 = Item.new
     item_1.link_url = "https://en.wikipedia.org/wiki/Frog"
     item_1.link_description = "Wikipedia Frog Article"
@@ -19,7 +19,7 @@ describe "/" do
 
     expect(page).to have_tag("a", :with => { :href => "#{item_1.link_url}" }, :text => /#{item_1.link_description}/),
       "Expected page to have a link with the text #{item_1.link_description} and an href of #{item_1.link_url}"
-    
+
     expect(page).to have_tag("a", :with => { :href => "#{item_2.link_url}" }, :text => /#{item_2.link_description}/),
       "Expected page to have a link with the text #{item_2.link_description} and an href of #{item_2.link_url}"
   end
