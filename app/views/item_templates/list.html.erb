@@ -4,7 +4,7 @@
 <% Item.all.each do |the_item| %>
   <div>
     <a href="<%= the_item.link_url %>">
-      Click me!
+      <%= the_item.link_description %>
     </a>
   </div>
 <% end %>
