@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  def index
+  def home
     render({ :template => "item_templates/list" })
   end
 end
